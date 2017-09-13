@@ -1,0 +1,19 @@
+
+body >img {width:100%;}
+body{   margin:10%;
+        border: 2px solid deeppink;
+        align-content:center;}
+ h1 {   color:lawngreen;
+         border: 1px solid deeppink;
+         margin: 5%;
+         padding-left:20%; 
+     }
+
+select{ margin: 5%;
+        border: 2px solid deeppink; 
+        padding: 2%;}
+option {padding: 5%;}
+button {margin: 5%;
+        color:darkblue; }
+.error {color:brown;
+         }

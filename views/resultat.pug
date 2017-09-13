@@ -1,0 +1,19 @@
+doctype html
+html
+   head
+      title = "Mini project"
+      link(rel='stylesheet',href="style1.css") 
+      script (src='/socket.io/socket.io.js')
+      script (src='https://code.jquery.com/jquery-1.11.1.js')
+    
+       
+   body
+        
+        block resultat
+            div hello
+            script.
+                const socket= io(); 
+                socket.on('vote update',function(vote){
+                    console.log('vote'+vote);
+
+                });

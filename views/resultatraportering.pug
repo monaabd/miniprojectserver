@@ -1,0 +1,26 @@
+extends layout
+block resultatraportering
+    h1 Choose your Church vote here
+    form#form(action=" ")
+        select#first
+            option(value='Blue') blue
+            option(value='green' type='checkbox') green
+    
+        button  submit
+
+        script.
+
+            const form = document.getElementById('form');
+            const first = document.getElementById('first');
+            
+            form.addEventListener('submit',function(){
+            console.log('hhhh');
+            
+            let vote = { first: first.options[first.selectedIndex].value,
+
+            };
+            
+            socket.emit('vote update', vote);
+            event.preventDefault();
+            return false;        
+            });    
