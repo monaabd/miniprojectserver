@@ -1,12 +1,12 @@
 extends layout
 block resultatraportering
-    h1 Choose your Church vote here
-    form#form(action=" ")
+    h1 Choose your church & vote here
+    form#form
         select#first
-            option(value='Blue') blue
-            option(value='green' type='checkbox') green
+            option Blue Group 
+            option Green Group
     
-        button  submit
+        button  Submit
 
         script.
 
@@ -14,13 +14,13 @@ block resultatraportering
             const first = document.getElementById('first');
             
             form.addEventListener('submit',function(){
-            console.log('hhhh');
+            console.log('submit is clicked');
             
             let vote = { first: first.options[first.selectedIndex].value,
-
+           
             };
-            
-            socket.emit('vote update', vote);
+            console.log('vote is '+ vote.first);
+            socket.emit('vote update', vote.first);
             event.preventDefault();
             return false;        
             });    

@@ -11,24 +11,28 @@ app.use(express.static(__dirname+'/public'));
 app.get('/',(req,res)=> {
    res.render('resultatraportering'); 
     });
-app.get('/404',function(req,res){
-     
-    res.render('404')
-   });
+app.get('/resultatraportering',(req,res)=> {
+   res.render('resultatraportering'); 
+    });
+
 app.get('/resultat',function(req,res){
      
     res.render('resultat')
+   });
+app.get('*',function(req,res){
+    
+    res.render('404')
    });
 
 
 io.on('connection', socket => {
    
     socket.on('vote update', vote => {
-        console.log('kkk');
+        console.log('vote'+vote);
         io.emit('vote update',vote);
     });
 });
 
-http.listen(3001, () => {
-    console.log ("Up and running at 3001");
+http.listen(3002, () => {
+    console.log ("Up and running at 3002");
 });

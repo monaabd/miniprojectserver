@@ -1,19 +1,39 @@
 
-body >img {width:100%;}
+
 body{   margin:10%;
-        border: 2px solid deeppink;
-        align-content:center;}
- h1 {   color:lawngreen;
-         border: 1px solid deeppink;
+        background-image: url("vote.jpg");
+        background-position: center;
+        font-size: 1.5em;
+        background-size:cover;
+        
+    }
+
+ h1 {    background-color: white ;
          margin: 5%;
-         padding-left:20%; 
+         padding-left:10%; 
      }
 
 select{ margin: 5%;
         border: 2px solid deeppink; 
-        padding: 2%;}
-option {padding: 5%;}
-button {margin: 5%;
-        color:darkblue; }
-.error {color:brown;
-         }
+        padding: 2%;
+        font-size: 1em;
+        font-weight: bolder;}
+
+button {margin: 9%;
+        padding: 3%;
+        border: 1em dashed white;
+        font-size: 1em;
+        font-weight: bolder;
+         background-color: deeppink;
+        /* Rotate div */
+        -ms-transform: rotate(-15deg); /* IE 9 */
+        -webkit-transform: rotate(-15deg); /* Chrome, Safari, Opera */
+        transform: rotate(-15deg);}
+
+#li    {font-size: 1.5em;
+        color: black;
+        background-color:  white ; }
+.error {font-size: 1.5em;
+        background-color: white ;
+         margin: 5%;
+        padding-left: 25%; }
